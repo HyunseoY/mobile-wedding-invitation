@@ -1,7 +1,9 @@
+import { Global, ThemeProvider, css } from '@emotion/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import './index.css';
+import { font, more, reset } from './styles/base';
+import { theme } from './styles/theme';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -9,6 +11,17 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <Global
+        styles={css`
+          ${reset}
+          ${more}
+          ${font}
+        `}
+      />
+      <div className="container">
+        <App />
+      </div>
+    </ThemeProvider>
   </React.StrictMode>
 );
