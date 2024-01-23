@@ -10,7 +10,7 @@ export const more = css`
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     box-sizing: border-box;
     min-width: 380px;
     max-width: 425px;
