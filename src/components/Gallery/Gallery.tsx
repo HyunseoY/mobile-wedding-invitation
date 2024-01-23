@@ -1,3 +1,3 @@
 export const Gallery = () => {
-  return <div>Hello, world!</div>;
+  return <div>Gallery</div>;
 };

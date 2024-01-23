@@ -1,3 +1,3 @@
 export const Comments = () => {
-  return <div>Hello, world!</div>;
+  return <div>Comments</div>;
 };

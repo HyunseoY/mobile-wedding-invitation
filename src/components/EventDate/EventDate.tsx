@@ -1,3 +1,3 @@
 export const EventDate = () => {
-  return <div>Hello, world!</div>;
+  return <div>EventDate</div>;
 };

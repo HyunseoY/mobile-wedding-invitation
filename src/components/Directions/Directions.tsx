@@ -1,3 +1,3 @@
 export const Directions = () => {
-  return <div>Hello, world!</div>;
+  return <div>Directions</div>;
 };
