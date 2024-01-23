@@ -9,7 +9,17 @@ export const font = css`
     font-display: swap;
   }
 
+  @font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url('/fonts/GowunDodum-Regular.ttf') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
   h1 {
     font-family: 'Ghanachocolate';
+  }
+  p,
+  span {
+    font-family: 'GowunDodum-Regular';
   }
 `;
