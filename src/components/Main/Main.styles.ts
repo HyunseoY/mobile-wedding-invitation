@@ -13,10 +13,11 @@ export const Container = styled.div`
 
 export const MainImage = styled.img`
   width: 90%;
+  padding-top: 5%;
 `;
 
 export const DateImage = styled.img`
   position: relative;
   width: 77%;
-  margin-top: 5%;
+  margin-top: 10%;
 `;
