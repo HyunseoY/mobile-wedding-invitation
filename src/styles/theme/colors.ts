@@ -13,8 +13,6 @@ export const colors = {
   backgroundSecondary: '#eeeeee',
   pink: '#F8B6B5',
   content1: '#AF9177',
-  content2: '#F0F0F0',
-  content3: '#ECECEC',
   gray2: '#222222',
   gray3: '#2A2A2A',
   gray4: '#4D4D4D',

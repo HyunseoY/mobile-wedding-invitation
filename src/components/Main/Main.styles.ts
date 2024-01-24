@@ -1,10 +1,9 @@
 import styled from '@emotion/styled';
+import { flex } from '../../styles/mixins';
 import { colors } from '../../styles/theme/colors';
 
 export const Container = styled.div`
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  ${flex.column({ align: 'center' })}
   margin: auto;
   margin-bottom: 10vh;
   padding: 50px 0;
