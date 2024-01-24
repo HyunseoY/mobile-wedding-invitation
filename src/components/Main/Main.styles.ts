@@ -19,5 +19,5 @@ export const MainImage = styled.img`
 export const DateImage = styled.img`
   position: relative;
   width: 77%;
-  margin-top: 10%;
+  margin-top: 5%;
 `;
