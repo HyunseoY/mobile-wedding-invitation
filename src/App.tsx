@@ -5,6 +5,7 @@ import {
   EventDate,
   Gallery,
   Greeting,
+  Information,
   Main,
 } from './components';
 
@@ -15,6 +16,7 @@ function App() {
       <Greeting />
       <EventDate />
       <Directions />
+      <Information />
       <Account />
       <Gallery />
       <Comments />
