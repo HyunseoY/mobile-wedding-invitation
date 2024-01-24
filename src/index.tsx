@@ -2,7 +2,6 @@ import { Global, ThemeProvider, css } from '@emotion/react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import { Overlay } from './components';
 import { font, more, reset } from './styles/base';
 import { theme } from './styles/theme';
 
@@ -20,8 +19,9 @@ root.render(
           ${font}
         `}
       />
-      <App />
-      <Overlay />
+      <div className="container">
+        <App />
+      </div>
     </ThemeProvider>
   </React.StrictMode>
 );
