@@ -18,4 +18,5 @@ export const Title = styled.p`
   color: ${colors.pink};
   font-size: large;
   font-weight: bold;
+  letter-spacing: 1px;
 `;
