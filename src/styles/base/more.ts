@@ -12,7 +12,7 @@ export const more = css`
     align-items: center;
     height: 100%;
     box-sizing: border-box;
-    min-width: 280px;
+    width: 100%;
     max-width: 425px;
     margin: auto;
     letter-spacing: -0.05em;
