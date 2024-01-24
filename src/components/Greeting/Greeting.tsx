@@ -1,4 +1,6 @@
-import { Title } from '../common';
+import { faPhone } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Button, Title } from '../common';
 import * as Styled from './Greeting.styles';
 
 export const Greeting = () => {
@@ -22,6 +24,15 @@ export const Greeting = () => {
 감사합니다 
         `}
       </Styled.Content>
+      <Styled.Line />
+      <Styled.Content margin>
+        신랑 지현 &nbsp; | &nbsp; 신부 라희
+      </Styled.Content>
+      <Button
+        text="연락하기"
+        size="medium"
+        icon={<FontAwesomeIcon icon={faPhone} color="rgb(175, 175, 175)" />}
+      />
     </Styled.Container>
   );
 };
