@@ -3,7 +3,6 @@ import {
   Comments,
   Directions,
   EventDate,
-  Footer,
   Gallery,
   Greeting,
   Main,
@@ -19,7 +18,6 @@ function App() {
       <Account />
       <Gallery />
       <Comments />
-      <Footer />
     </>
   );
 }
