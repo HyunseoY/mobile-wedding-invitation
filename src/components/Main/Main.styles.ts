@@ -20,19 +20,3 @@ export const DateImage = styled.img`
   width: 77%;
   margin-top: 5%;
 `;
-
-// export const TextBox = styled.div`
-//   position: relative;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-//   width: 77%;
-//   bottom: 10vh;
-//   z-index: 1;
-// `;
-
-// export const Text = styled.span`
-//   padding: 0.5vh 0 0 10vh;
-//   color: ${colors.content1};
-// `;
