@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { useOverlayStore } from '../../../overlay.store';
+import { useOverlayStore } from '../../overlay.store';
 
 export const Overlay = () => {
   const overlays = useOverlayStore((state) => state.overlays);
