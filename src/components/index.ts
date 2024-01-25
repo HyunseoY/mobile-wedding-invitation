@@ -6,3 +6,4 @@ export * from './Gallery';
 export * from './Greeting';
 export * from './Information';
 export * from './Main';
+export * from './Overlay';

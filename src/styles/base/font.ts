@@ -25,7 +25,8 @@ export const font = css`
     font-family: 'Ghanachocolate';
   }
 
-  p {
+  p,
+  button {
     font-family: 'GowunDodum-Regular';
     color: #585858;
   }
