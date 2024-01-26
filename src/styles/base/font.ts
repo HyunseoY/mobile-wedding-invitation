@@ -26,7 +26,8 @@ export const font = css`
   }
 
   p,
-  button {
+  button,
+  .react-calendar {
     font-family: 'GowunDodum-Regular';
     color: #585858;
   }

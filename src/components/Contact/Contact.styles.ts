@@ -5,14 +5,15 @@ import { colors } from '../../styles/theme/colors';
 
 export const Container = styled.div`
   ${flex.column({ align: 'center', justify: 'center' })}
-  width: 100vw;
-  padding: 6vh;
+  width: 100%;
+  max-width: 425px;
+  padding: 8vh;
 `;
 
 export const BrideGroomWrap = styled.div`
   ${grid({ align: 'center', gap: 50 })}
   width: 100%;
-  margin-top: 10vh;
+  margin-top: 7vh;
 `;
 
 export const Section = styled.section<{ color?: ColorsKey }>`
@@ -21,9 +22,8 @@ export const Section = styled.section<{ color?: ColorsKey }>`
 
 export const Line = styled.span`
   display: block;
-  height: 0.2px;
+  border-top: 0.2px dotted ${colors.gray2};
   margin: 1.5vh 0;
-  background-color: ${colors.gray2};
 `;
 
 export const TitleBox = styled.div`
