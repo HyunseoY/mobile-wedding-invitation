@@ -1,5 +1,6 @@
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { colors } from '../../styles/theme/colors';
 import { Title } from '../common';
 import * as Styled from './Contact.styles';
 
@@ -29,20 +30,15 @@ export const Contact = () => {
             </Styled.IndexBox>
 
             <Styled.NameBox>
-              <Styled.Text>지현</Styled.Text>
+              <Styled.Text color="gray4">최지현</Styled.Text>
             </Styled.NameBox>
 
             <Styled.LinkBox>
-              <a href="tel:01000000000">
-                {<FontAwesomeIcon icon={faPhone} color="rgb(175, 175, 175)" />}
+              <a href="tel:01094264646">
+                {<FontAwesomeIcon icon={faPhone} color={colors.gray3} />}
               </a>
-              <a href="sms:01000000000">
-                {
-                  <FontAwesomeIcon
-                    icon={faEnvelope}
-                    color="rgb(175, 175, 175)"
-                  />
-                }
+              <a href="sms:01094264646">
+                {<FontAwesomeIcon icon={faEnvelope} color={colors.gray3} />}
               </a>
             </Styled.LinkBox>
           </Styled.PhoneMailBox>
@@ -63,14 +59,14 @@ export const Contact = () => {
             </Styled.IndexBox>
 
             <Styled.NameBox>
-              <Styled.Text>라희</Styled.Text>
+              <Styled.Text color="gray4">정라희</Styled.Text>
             </Styled.NameBox>
 
             <Styled.LinkBox>
-              <a href="tel:01000000000">
+              <a href="tel:01024285533">
                 {<FontAwesomeIcon icon={faPhone} color="rgb(175, 175, 175)" />}
               </a>
-              <a href="sms:01000000000">
+              <a href="sms:01024285533">
                 {
                   <FontAwesomeIcon
                     icon={faEnvelope}

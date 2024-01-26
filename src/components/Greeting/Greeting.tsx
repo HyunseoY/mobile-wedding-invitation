@@ -1,9 +1,19 @@
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Contact } from '../Contact';
 import { Button, Title } from '../common';
+import { useModal } from '../common/Modal/Modal.hooks';
 import * as Styled from './Greeting.styles';
 
+export const CONTACT_MODAL = 'CONTACT_MODAL';
+
 export const Greeting = () => {
+  const { mount } = useModal();
+
+  const clickModalOpenHandler = () => {
+    mount(<Contact />, { id: CONTACT_MODAL });
+  };
+
   return (
     <Styled.Container>
       <Title subTitle="INVITATION" title="소중한 분들을 초대합니다" />
@@ -32,6 +42,7 @@ export const Greeting = () => {
         text="연락하기"
         size="medium"
         icon={<FontAwesomeIcon icon={faPhone} color="rgb(175, 175, 175)" />}
+        onClick={clickModalOpenHandler}
       />
     </Styled.Container>
   );

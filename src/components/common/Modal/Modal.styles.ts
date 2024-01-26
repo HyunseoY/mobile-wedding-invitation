@@ -1,9 +1,9 @@
-import { css, keyframes } from '@emotion/react';
+import { keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
-import { fade, slideY } from '../../../styles/animation';
+import xIcon from '../../../assets/xIcon.svg';
 import { flex, position, size } from '../../../styles/mixins';
-import { hexToRgba } from '../../../styles/utils';
-import type { WithTheme } from '../../../types';
+import { colors } from '../../../styles/theme/colors';
+import { zIndex } from '../../../styles/theme/zIndex';
 import type { ModalStyleProps } from './Modal.types';
 
 export const fadeIn = keyframes`
@@ -11,48 +11,25 @@ export const fadeIn = keyframes`
   100% { opacity: 1; }
 `;
 
-const outerBackgroundStyle = ({
-  theme: { colors },
-}: WithTheme<ModalStyleProps>) => {
-  return css`
-    background-color: ${hexToRgba(colors.black, 0.4)};
-    backdrop-filter: blur(8px);
-  `;
-};
-
-export const Outer = styled.div<ModalStyleProps>`
-  ${(props) => outerBackgroundStyle(props)}
-
+export const Inner = styled.div<ModalStyleProps>`
   ${flex.center()};
-
-  ${position.absolute({ top: 0, left: 0 })};
-
-  ${size({ width: '100%', height: '100%' })};
-
-  ${({ theme }) => css`
-    z-index: ${theme.zIndex.modal};
-  `}
-
-  animation: ${fade(0)} 400ms;
-
+  ${position.fixed({ top: 0, left: 0 })};
+  ${size({ width: '100%', height: '100%' })}
+  z-index: ${zIndex.modal};
+  background-color: ${colors.backgroundModal};
+  backdrop-filter: blur(10px);
+  animation: ${fadeIn} 400ms;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 `;
 
-const innerStyle = ({ theme: { colors } }: WithTheme<ModalStyleProps>) => {
-  return css`
-    background-color: ${colors.backgroundSecondary};
-
-    border-radius: 16px;
-
-    animation: ${slideY(20)} 400ms;
-  `;
-};
-
-export const Inner = styled.div<ModalStyleProps>`
-  ${(props) => innerStyle(props)}
-
-  position: relative;
-
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
+export const CloseButton = styled.button`
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: url(${xIcon}) no-repeat center center;
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
 `;

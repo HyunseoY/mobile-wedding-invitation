@@ -1,5 +1,4 @@
 export interface ModalStyleProps {
-  type?: 'center' | 'bottom';
   background?: 'none' | 'clear';
 }
 

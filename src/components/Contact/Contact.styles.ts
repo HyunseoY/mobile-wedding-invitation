@@ -5,7 +5,7 @@ import { colors } from '../../styles/theme/colors';
 
 export const Container = styled.div`
   ${flex.column({ align: 'center', justify: 'center' })}
-  background-color: ${colors.backgroundModal};
+  width: 100vw;
   padding: 6vh;
 `;
 
@@ -48,7 +48,7 @@ export const PhoneMailBox = styled.div`
 `;
 
 export const IndexBox = styled.div`
-  ${flex({ justify: 'start' })}
+  ${flex({ justify: 'start', align: 'center' })}
 `;
 
 export const NameBox = styled.div`

@@ -7,3 +7,4 @@ export * from './Greeting';
 export * from './Information';
 export * from './Main';
 export * from './Overlay';
+export * from './common';

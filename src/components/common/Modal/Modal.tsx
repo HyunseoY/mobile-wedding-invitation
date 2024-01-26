@@ -1,28 +1,30 @@
-import type { MouseEvent, PropsWithChildren } from 'react';
+import { useEffect, type MouseEvent, type PropsWithChildren } from 'react';
 import { useModal } from './Modal.hooks';
 import * as Styled from './Modal.styles';
 import type { ModalProps } from './Modal.types';
 
-export const Modal = ({
-  id,
-  children,
-  type,
-  background,
-}: PropsWithChildren<ModalProps>) => {
+export const Modal = ({ id, children }: PropsWithChildren<ModalProps>) => {
   const { unmount } = useModal();
+
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
 
   const handleClose = ({
     target,
     currentTarget,
-  }: MouseEvent<HTMLDivElement>) => {
+  }: MouseEvent<HTMLButtonElement>) => {
     if (target !== currentTarget) return;
-
     unmount(id);
   };
 
   return (
-    <Styled.Outer onClick={handleClose} type={type} background={background}>
-      <Styled.Inner type={type}>{children}</Styled.Inner>
-    </Styled.Outer>
+    <Styled.Inner>
+      <Styled.CloseButton onClick={handleClose} />
+      {children}
+    </Styled.Inner>
   );
 };
