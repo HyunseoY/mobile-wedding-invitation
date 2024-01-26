@@ -8,14 +8,12 @@ import {
   Information,
   Main,
 } from './components';
-import { Contact } from './components/Contact/Contact';
 
 function App() {
   return (
     <>
       <Main />
       <Greeting />
-      <Contact />
       <EventDate />
       <Directions />
       <Information />
