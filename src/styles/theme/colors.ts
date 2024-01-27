@@ -8,6 +8,8 @@ export const colors = {
   gray2: '#797475',
   gray3: '#CCCCCC',
   gray4: '#EDEDED',
+  gray5: '#707070',
+  gray6: '#AFAFAF',
   content1: '#AF9177',
   content2: '#898787',
   backgroundPrimary: '#fafafa',

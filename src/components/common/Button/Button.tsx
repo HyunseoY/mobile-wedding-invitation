@@ -1,12 +1,7 @@
 import * as Styled from './Button.styles';
 import { ButtonProps } from './Button.types';
 
-export const Button: React.FC<ButtonProps> = ({
-  text,
-  size,
-  icon,
-  onClick,
-}) => {
+export const Button = ({ text, size, icon, onClick }: ButtonProps) => {
   return (
     <Styled.Container>
       <Styled.Button size={size} onClick={onClick}>
