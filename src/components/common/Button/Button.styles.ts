@@ -10,9 +10,10 @@ export const Container = styled.div`
 
 export const Button = styled.button<ButtonProps>`
   border: 1px solid ${colors.gray};
-  border-radius: 15px 15px 0 15px;
+  border-radius: 15px;
   padding: 5%;
   margin: 3vh 0 10vh 0;
+  background-color: ${colors.white};
 
   ${({ size }) =>
     size === 'small'
