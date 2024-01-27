@@ -79,21 +79,12 @@ export const Line = styled.span`
 export const Text = styled.p<{
   color?: ColorsKey;
   fontSize?: string;
+  letterSpacing?: string;
 }>`
   font-size: ${(props) => props.fontSize || '1em'};
   color: ${(props) => (props.color ? colors[props.color] : '#585858')};
 
-  letter-spacing: 1px;
-`;
-
-export const DdayText = styled.span<{
-  color?: ColorsKey;
-  fontSize?: string;
-}>`
-  font-size: ${(props) => props.fontSize || '1em'};
-  color: ${(props) => (props.color ? colors[props.color] : '#585858')};
-
-  letter-spacing: 0.1px;
+  letter-spacing: ${(props) => props.letterSpacing || '0.1px'};
 `;
 
 export const DdayDott = styled.span`

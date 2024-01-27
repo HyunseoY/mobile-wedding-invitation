@@ -19,8 +19,10 @@ export const EventDate = () => {
   return (
     <Styled.Container>
       <FlexColumn align="center" gap={15}>
-        <Styled.Text fontSize="20px">2024.05.25</Styled.Text>
-        <Styled.Text fontSize="medium" color="content2">
+        <Styled.Text fontSize="20px" letterSpacing="1px">
+          2024.05.25
+        </Styled.Text>
+        <Styled.Text fontSize="medium" color="content2" letterSpacing="1px">
           토요일 오전 11시
         </Styled.Text>
       </FlexColumn>
@@ -43,7 +45,7 @@ export const EventDate = () => {
       <div>
         {app.timeLeft ? (
           <FlexColumn gap={25}>
-            <Flex justify="center" align="end" gap={5}>
+            <Flex justify="center" align="end" gap={7}>
               <FlexColumn align="center" gap={5}>
                 <Styled.Text as="span" fontSize="10px" color="gray3">
                   DAYS
@@ -87,7 +89,7 @@ export const EventDate = () => {
               </FlexColumn>
             </Flex>
 
-            <Styled.Text fontSize="14px">
+            <Styled.Text fontSize="14px" letterSpacing="none">
               라희, 지현의 결혼식이&nbsp;
               <Styled.Text as="span" color="pink" fontSize="18px">
                 {app.timeLeft.days}
@@ -97,7 +99,7 @@ export const EventDate = () => {
           </FlexColumn>
         ) : (
           <FlexColumn gap={25}>
-            <Flex justify="center" align="end" gap={5}>
+            <Flex justify="center" align="end" gap={7}>
               <FlexColumn align="center" gap={5}>
                 <Styled.Text as="span" fontSize="10px" color="gray3">
                   DAYS
