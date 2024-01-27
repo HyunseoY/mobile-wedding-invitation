@@ -9,10 +9,13 @@ export const Container = styled.div`
 `;
 
 export const Button = styled.button<ButtonProps>`
+  ${flex.center()}
+
+  height: 45px;
   border: 1px solid ${colors.gray};
   border-radius: 15px;
   padding: 5%;
-  margin: 3vh 0 10vh 0;
+  margin: ${(props) => props.margin || '3vh 0 10vh 0'};
   background-color: ${colors.white};
 
   ${({ size }) =>

@@ -21,6 +21,7 @@ export const font = css`
     font-weight: normal;
     font-style: normal;
   }
+
   h1 {
     font-family: 'Ghanachocolate';
   }

@@ -1,5 +1,6 @@
 import { faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { colors } from '../../styles/theme/colors';
 import { Contact } from '../Contact';
 import { Button, Title } from '../common';
 import { useModal } from '../common/Modal/Modal.hooks';
@@ -36,12 +37,12 @@ export const Greeting = () => {
       </Styled.Content>
       <Styled.Line />
       <Styled.Content margin>
-        신랑 지현 &nbsp; | &nbsp; 신부 라희
+        신랑 최지현 &nbsp; | &nbsp; 신부 정라희
       </Styled.Content>
       <Button
         text="연락하기"
         size="medium"
-        icon={<FontAwesomeIcon icon={faPhone} color="rgb(175, 175, 175)" />}
+        icon={<FontAwesomeIcon icon={faPhone} color={colors.gray6} />}
         onClick={clickModalOpenHandler}
       />
     </Styled.Container>
