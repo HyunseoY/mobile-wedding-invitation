@@ -1,6 +1,6 @@
 import { message } from 'antd';
 
-export const useDirections = () => {
+export const useTransportation = () => {
   const lat = 35.151477;
   const lng = 129.061116;
 
