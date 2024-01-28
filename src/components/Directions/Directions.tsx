@@ -22,9 +22,6 @@ export const Directions = () => {
   const { mount } = useModal();
   const app = useDirections();
 
-  const lat = 37.5665;
-  const lng = 126.978;
-
   const [isMapLocked, setMapLocked] = useState(true);
   const position = { lat: 35.151477, lng: 129.061116 };
 
@@ -92,21 +89,21 @@ export const Directions = () => {
         <Styled.Text>원하시는 앱을 선택하시면 길안내가 시작됩니다.</Styled.Text>
 
         <FlexCenter gap={5}>
-          <Styled.AppButton onClick={() => app.openNaverMap(lat, lng)}>
+          <Styled.AppButton onClick={app.openNaverMap}>
             <FlexCenter>
               <Styled.AppButtonImg src={navermap} alt="navermap" />
               네이버지도
             </FlexCenter>
           </Styled.AppButton>
 
-          <Styled.AppButton onClick={() => app.openTMap(lat, lng)}>
+          <Styled.AppButton onClick={app.openTmap}>
             <FlexCenter>
               <Styled.AppButtonImg src={tmap} alt="tmap" />
               티맵
             </FlexCenter>
           </Styled.AppButton>
 
-          <Styled.AppButton onClick={() => app.openNaverMap(lat, lng)}>
+          <Styled.AppButton onClick={app.openKakaoNavi}>
             <FlexCenter>
               <Styled.AppButtonImg src={kakaonav} alt="kakaonav" />
               카카오네비
