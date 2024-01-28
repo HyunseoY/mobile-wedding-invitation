@@ -13,7 +13,7 @@ export const more = css`
     height: 100%;
     box-sizing: border-box;
     width: 100%;
-    max-width: 425px;
+    max-width: 430px;
     margin: auto;
     letter-spacing: -0.05em;
     outline: none;
