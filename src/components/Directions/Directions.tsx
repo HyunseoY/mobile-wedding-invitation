@@ -6,21 +6,30 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import { Map, MapMarker, useKakaoLoader } from 'react-kakao-maps-sdk';
+import kakaonav from '../../assets/kakaonav.svg';
 import map from '../../assets/map.png';
+import navermap from '../../assets/navermap.png';
+import tmap from '../../assets/tmap.svg';
 import { FlexCenter, FlexColumn } from '../../styles/mixins';
 import { colors } from '../../styles/theme/colors';
 import { Title, useModal } from '../common';
+import { useDirections } from './\bDirections.hooks';
 import * as Styled from './Directions.styles';
 
 export const MAP_IMAGE = 'MAP_IMAGE';
 
 export const Directions = () => {
   const { mount } = useModal();
+  const app = useDirections();
+
+  const lat = 37.5665;
+  const lng = 126.978;
+
   const [isMapLocked, setMapLocked] = useState(true);
   const position = { lat: 35.151477, lng: 129.061116 };
 
   const [loading, error] = useKakaoLoader({
-    appkey: process.env.REACT_APP_KAKAO_API_KEY || 'default-app-key', // 발급 받은 APPKEY
+    appkey: process.env.REACT_APP_KAKAO_API_KEY || 'default-app-key',
   });
 
   const handleLockToggle = () => {
@@ -81,6 +90,30 @@ export const Directions = () => {
       <Styled.Transportation>
         <Styled.Text>네비게이션</Styled.Text>
         <Styled.Text>원하시는 앱을 선택하시면 길안내가 시작됩니다.</Styled.Text>
+
+        <FlexCenter gap={5}>
+          <Styled.AppButton onClick={() => app.openNaverMap(lat, lng)}>
+            <FlexCenter>
+              <Styled.AppButtonImg src={navermap} alt="navermap" />
+              네이버지도
+            </FlexCenter>
+          </Styled.AppButton>
+
+          <Styled.AppButton onClick={() => app.openTMap(lat, lng)}>
+            <FlexCenter>
+              <Styled.AppButtonImg src={tmap} alt="tmap" />
+              티맵
+            </FlexCenter>
+          </Styled.AppButton>
+
+          <Styled.AppButton onClick={() => app.openNaverMap(lat, lng)}>
+            <FlexCenter>
+              <Styled.AppButtonImg src={kakaonav} alt="kakaonav" />
+              카카오네비
+            </FlexCenter>
+          </Styled.AppButton>
+        </FlexCenter>
+
         <Styled.Line />
       </Styled.Transportation>
     </>

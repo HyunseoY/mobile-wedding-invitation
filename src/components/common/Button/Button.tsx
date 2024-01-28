@@ -5,7 +5,7 @@ export const Button = ({ text, size, icon, onClick }: ButtonProps) => {
   return (
     <Styled.Container>
       <Styled.Button size={size} onClick={onClick}>
-        {icon} &nbsp;
+        {icon}&nbsp;
         {text}
       </Styled.Button>
     </Styled.Container>
