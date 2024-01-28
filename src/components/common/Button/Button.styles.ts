@@ -11,9 +11,7 @@ export const Container = styled.div`
 export const Button = styled.button<ButtonProps>`
   ${flex.center()}
 
-  height: 45px;
   border: 1px solid ${colors.gray};
-  border-radius: 15px;
   padding: 5%;
   margin: ${(props) => props.margin || '3vh 0 10vh 0'};
   background-color: ${colors.white};
@@ -21,9 +19,13 @@ export const Button = styled.button<ButtonProps>`
   ${({ size }) =>
     size === 'small'
       ? css`
-          width: 100px;
+          width: 95px;
+          height: 40px;
+          border-radius: 7px;
         `
       : css`
           width: 200px;
+          height: 45px;
+          border-radius: 15px;
         `}
 `;

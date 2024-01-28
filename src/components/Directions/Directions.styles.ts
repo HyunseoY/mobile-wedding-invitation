@@ -37,6 +37,23 @@ export const Button = styled.button`
   background-color: ${colors.white};
 `;
 
+export const AppButton = styled.button`
+  width: 95px;
+  height: 40px;
+  font-size: 12px;
+  border-radius: 7px;
+  border: 1px solid ${colors.gray};
+  background-color: ${colors.white};
+`;
+
+export const AppButtonImg = styled.img`
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+  border-radius: 3px;
+  margin-right: 3px;
+`;
+
 export const Transportation = styled.div`
   ${flex.column()}
 `;
