@@ -1,9 +1,9 @@
 import { ColorsKey } from '../../../styles/theme';
 
 export interface TextProps {
-  text: string;
+  text?: string | JSX.Element;
   color?: ColorsKey;
   fontSize?: string;
   letterSpacing?: string;
-  outline?: true;
+  margin?: string | number;
 }

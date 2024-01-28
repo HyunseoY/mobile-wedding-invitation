@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { flex } from '../../styles/mixins';
+import { ColorsKey } from '../../styles/theme';
 import { colors } from '../../styles/theme/colors';
 import { zIndex } from '../../styles/theme/zIndex';
 import { TextProps } from '../EventDate/EventDate.types';
@@ -15,7 +16,6 @@ export const LockToggle = styled.button`
 export const Text = styled.p<TextProps>`
   font-size: ${(props) => props.fontSize || '1em'};
   color: ${(props) => (props.color ? colors[props.color] : '#585858')};
-
   letter-spacing: ${(props) => props.letterSpacing || '1px'};
 `;
 
@@ -56,10 +56,22 @@ export const AppButtonImg = styled.img`
 
 export const Transportation = styled.div`
   ${flex.column()}
+
+  padding: 0 50px;
+  margin-bottom: 15vh;
 `;
 
 export const Line = styled.span`
   display: block;
-  border-top: 0.2px dotted ${colors.gray2};
-  margin: 1.5vh 0;
+  border-top: 0.5px dotted ${colors.gray3};
+  margin: 20px 0;
+`;
+
+export const Dott = styled.span<{ color?: ColorsKey }>`
+  width: 8px;
+  height: 8px;
+  background-color: ${(props) =>
+    props.color ? colors[props.color] : colors.black};
+  border-radius: 50%;
+  margin-right: 5px;
 `;
