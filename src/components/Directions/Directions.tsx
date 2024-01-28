@@ -106,7 +106,7 @@ export const Directions = () => {
           <Styled.AppButton onClick={app.openKakaoNavi}>
             <FlexCenter>
               <Styled.AppButtonImg src={kakaonav} alt="kakaonav" />
-              카카오네비
+              카카오내비
             </FlexCenter>
           </Styled.AppButton>
         </FlexCenter>
