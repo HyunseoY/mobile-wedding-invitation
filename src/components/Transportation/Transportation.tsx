@@ -21,7 +21,7 @@ export const Transportation = () => {
           />
         </FlexColumn>
 
-        <FlexCenter gap={5} marginTop={15}>
+        <Flex gap={5} marginTop={15} align="center" justify="between">
           <Styled.AppButton onClick={app.openNaverMap}>
             <FlexCenter>
               <Styled.AppButtonImg src={navermap} alt="navermap" />
@@ -42,7 +42,7 @@ export const Transportation = () => {
               카카오지도
             </FlexCenter>
           </Styled.AppButton>
-        </FlexCenter>
+        </Flex>
 
         <Styled.Line />
 

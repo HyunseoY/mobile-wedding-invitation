@@ -3,9 +3,7 @@ import {
   Comments,
   Directions,
   EventDate,
-  Gallery,
   Greeting,
-  Information,
   Main,
 } from './components';
 
@@ -16,9 +14,9 @@ function App() {
       <Greeting />
       <EventDate />
       <Directions />
-      <Information />
+      {/* <Information /> */}
       <Account />
-      <Gallery />
+      {/* <Gallery /> */}
       <Comments />
     </>
   );

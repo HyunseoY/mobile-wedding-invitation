@@ -28,6 +28,7 @@ export const font = css`
 
   p,
   button,
+  a,
   .react-calendar,
   .ant-message {
     font-family: 'GowunDodum-Regular';
