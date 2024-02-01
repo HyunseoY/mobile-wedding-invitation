@@ -3,7 +3,11 @@ import { useModal } from './Modal.hooks';
 import * as Styled from './Modal.styles';
 import type { ModalProps } from './Modal.types';
 
-export const Modal = ({ id, children }: PropsWithChildren<ModalProps>) => {
+export const Modal = ({
+  id,
+  children,
+  type = 'fade',
+}: PropsWithChildren<ModalProps>) => {
   const { unmount } = useModal();
 
   useEffect(() => {
@@ -22,8 +26,8 @@ export const Modal = ({ id, children }: PropsWithChildren<ModalProps>) => {
   };
 
   return (
-    <Styled.Inner>
-      <Styled.CloseButton onClick={handleClose} />
+    <Styled.Inner modalType={type}>
+      <Styled.CloseButton modalType={type} onClick={handleClose} />
       {children}
     </Styled.Inner>
   );

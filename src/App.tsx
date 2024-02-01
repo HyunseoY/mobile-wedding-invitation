@@ -3,7 +3,10 @@ import {
   Comments,
   Directions,
   EventDate,
+  Footer,
+  Gallery,
   Greeting,
+  Information,
   Main,
 } from './components';
 
@@ -14,10 +17,11 @@ function App() {
       <Greeting />
       <EventDate />
       <Directions />
-      {/* <Information /> */}
+      <Information />
       <Account />
-      {/* <Gallery /> */}
+      <Gallery />
       <Comments />
+      <Footer />
     </>
   );
 }

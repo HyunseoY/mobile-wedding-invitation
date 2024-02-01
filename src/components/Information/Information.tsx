@@ -1,9 +1,10 @@
 import { Title } from '../common';
+import * as Styled from './Information.styles';
 
 export const Information = () => {
   return (
-    <div>
+    <Styled.Container>
       <Title subTitle="INFORMATION" title="예식정보 및 안내사항" />
-    </div>
+    </Styled.Container>
   );
 };

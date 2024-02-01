@@ -1,10 +1,11 @@
 import { Title } from '../common';
+import * as Styled from './Gallery.styles';
 
 export const Gallery = () => {
   return (
-    <div>
+    <Styled.Container>
       <Title subTitle="GALLERY" title="갤러리" />
       {/* <Carousel /> */}
-    </div>
+    </Styled.Container>
   );
 };
