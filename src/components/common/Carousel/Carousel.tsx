@@ -1,28 +1,48 @@
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { useState } from "react";
+import { FlexColumn } from "../../../styles/mixins";
+import * as Styled from "./Carousel.styles";
 
-export const Carousel = () => {
+export const Carousel = ({ images }: { images: string[] }) => {
+  const [current, setCurrent] = useState(0);
+  const length = images.length;
+
+  const [startX, setStartX] = useState(0);
+  const [endX, setEndX] = useState(0);
+
+  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+    setStartX(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+    setEndX(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (startX - endX > 150) {
+      setCurrent(current === length - 1 ? 0 : current + 1);
+    } else if (startX - endX < -150) {
+      setCurrent(current === 0 ? length - 1 : current - 1);
+    }
+  };
+
   return (
-    <>
-      <Swiper
-        pagination={{
-          dynamicBullets: true,
-        }}
-        modules={[Pagination]}
-        className="mySwiper"
+    <FlexColumn>
+      <Styled.CarouselWrapper
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
-      </Swiper>
-    </>
+        {images.map((image, index) => (
+          <Styled.Slide className={index === current ? "active" : ""} key={index}>
+            {index === current && <Styled.Image src={image} alt="carousel slide" />}
+          </Styled.Slide>
+        ))}
+      </Styled.CarouselWrapper>
+      <Styled.DotsWrapper>
+        {images.map((_, index) => (
+          <Styled.Dot key={index} active={index === current} onClick={() => setCurrent(index)} />
+        ))}
+      </Styled.DotsWrapper>
+    </FlexColumn>
   );
 };
