@@ -3,7 +3,7 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
 import { db } from "../../firebase";
-import { COMMENT_FORM_MODAL } from "../Comments";
+import { COMMENT_FORM_MODAL } from "../Comments/Comments.hooks";
 import { useModal } from "../common";
 
 export const useForm = () => {
