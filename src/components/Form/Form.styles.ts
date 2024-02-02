@@ -21,11 +21,16 @@ export const Dott = styled.p`
   height: 5px;
   background-color: ${colors.red};
   border-radius: 50%;
-  margin: 2px 0 0 3px;
+  margin: 1px 0 0 3px;
+`;
+
+export const CommentForm = styled.form`
+  ${flex.column()}
+
+  width: 80%;
 `;
 
 export const ItemBox = styled.div`
-  width: 80%;
   padding: 20px 0;
   border-bottom: 0.5px solid ${colors.gray4};
 `;
@@ -53,10 +58,9 @@ export const TextArea = styled.textarea`
 export const SubmitButton = styled.button`
   ${flex.center()}
 
-  width: 80%;
   border: 1px solid ${colors.gray};
   padding: 5%;
-  margin: 5vh;
+  margin: 5vh 0;
   color: ${colors.white};
   background-color: ${colors.realBlack};
 `;
