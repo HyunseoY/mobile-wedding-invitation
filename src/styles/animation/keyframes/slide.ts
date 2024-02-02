@@ -1,4 +1,4 @@
-import { keyframes } from "@emotion/react";
+import { keyframes } from '@emotion/react';
 
 export const slideY = (startPos: number) => keyframes`
   0% {
@@ -27,7 +27,16 @@ export const slideYCenter = (startPos: number) => keyframes`
   }
 `;
 
+export const slideUp = keyframes`
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
+
 export const slide = {
   vertical: slideY,
-  horizontal: slideX
+  horizontal: slideX,
 } as const;

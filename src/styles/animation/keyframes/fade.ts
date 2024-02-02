@@ -1,10 +1,6 @@
-import { keyframes } from "@emotion/react";
+import { keyframes } from '@emotion/react';
 
-export const fade = (startOpacity = 0) => keyframes`
-  0% {
-    opacity: ${startOpacity};
-  }
-  100% {
-    opacity: 1;
-  }
+export const fade = keyframes`
+  0% { opacity: 0; }
+  100% { opacity: 1; }
 `;

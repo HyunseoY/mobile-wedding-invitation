@@ -13,7 +13,7 @@ import { Transportation } from '../Transportation';
 import { Text, Title, useModal } from '../common';
 import * as Styled from './Directions.styles';
 
-export const MAP_IMAGE = 'MAP_IMAGE';
+export const MAP_IMAGE_MODAL = 'MAP_IMAGE_MODAL';
 
 export const Directions = () => {
   const { mount } = useModal();
@@ -31,7 +31,7 @@ export const Directions = () => {
   };
 
   const clickModalOpenHandler = () => {
-    mount(<Styled.MapImg src={map} />, { id: MAP_IMAGE });
+    mount(<Styled.MapImg src={map} />, { id: MAP_IMAGE_MODAL });
   };
 
   return (

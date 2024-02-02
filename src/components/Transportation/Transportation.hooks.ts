@@ -20,7 +20,7 @@ export const useTransportation = () => {
   };
 
   const openNaverMap = () => {
-    const url = `nmap://route/public?dlat=${lat}&dlng=${lng}&dname=헤리움웨딩홀&appname=com.example.myapp`;
+    const url = `nmap://route/car?dlat=${lat}&dlng=${lng}&dname=헤리움웨딩홀&appname=com.example.myapp`;
     openApp(url, 'https://map.naver.com/');
   };
 
