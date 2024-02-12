@@ -24,7 +24,7 @@ export const useAccount = () => {
 
   const brideHandleCopy = async () => {
     try {
-      await navigator.clipboard.writeText("하나은행 01045498355107");
+      await navigator.clipboard.writeText("하나은행 010-454983-55107");
       message.info("계좌번호가 복사되었습니다.");
     } catch (err) {
       message.error("이 브라우저에서는 지원하지 않습니다.");
