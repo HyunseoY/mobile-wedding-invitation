@@ -24,7 +24,7 @@ export const Comments = () => {
       </Styled.CommentWrapper>
 
       <FlexColumn align="center" marginTop={35} gap={10}>
-        <Text text="신랑, 신부에게" />
+        <Text text="신부, 신랑에게" />
         <Text text="축하 메세지를 남겨보세요" />
         <Button
           size="medium"
