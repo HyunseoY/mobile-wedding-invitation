@@ -18,15 +18,15 @@ export const Carousel = ({ images }: { images: string[] }) => {
   };
 
   const handleTouchEnd = () => {
-    if (startX - endX > 150) {
+    if (startX - endX > 50) {
       setCurrent(current === length - 1 ? 0 : current + 1);
-    } else if (startX - endX < -150) {
+    } else if (startX - endX < -50) {
       setCurrent(current === 0 ? length - 1 : current - 1);
     }
   };
 
   return (
-    <FlexColumn>
+    <FlexColumn marginTop={35}>
       <Styled.CarouselWrapper
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
