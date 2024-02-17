@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal";
 import shoot1 from "../../assets/shoot1.png";
 import shoot10 from "../../assets/shoot10.png";
 import shoot11 from "../../assets/shoot11.png";
@@ -30,9 +31,13 @@ export const Gallery = () => {
 
   return (
     <Styled.Container>
-      <Title subTitle="GALLERY" title="갤러리" />
+      <Fade direction="up" triggerOnce={true} fraction={0.01}>
+        <Title subTitle="GALLERY" title="갤러리" />
+      </Fade>
 
-      <Carousel images={images} />
+      <Fade direction="up" triggerOnce={true} fraction={0.01}>
+        <Carousel images={images} />
+      </Fade>
     </Styled.Container>
   );
 };

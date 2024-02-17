@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal";
 import dining from "../../assets/dining.png";
 import parking from "../../assets/parking.png";
 import { Carousel, Title } from "../common";
@@ -8,9 +9,13 @@ export const Information = () => {
 
   return (
     <Styled.Container>
-      <Title subTitle="INFORMATION" title="예식정보 및 안내사항" />
+      <Fade direction="up" triggerOnce={true} fraction={0.01}>
+        <Title subTitle="INFORMATION" title="예식정보 및 안내사항" />
+      </Fade>
 
-      <Carousel images={images} />
+      <Fade direction="up" triggerOnce={true} fraction={0.01}>
+        <Carousel images={images} />
+      </Fade>
     </Styled.Container>
   );
 };
