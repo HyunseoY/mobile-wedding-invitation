@@ -1,6 +1,6 @@
-import date from '../../assets/date.png';
-import wedding from '../../assets/wedding.png';
-import * as Styled from './Main.styles';
+import date from "../../assets/date.png";
+import wedding from "../../assets/wedding.png";
+import * as Styled from "./Main.styles";
 
 export const Main = () => {
   return (

@@ -1,5 +1,5 @@
-import { css } from '@emotion/react';
-import { colors } from '../theme/colors';
+import { css } from "@emotion/react";
+import { colors } from "../theme/colors";
 
 export const more = css`
   html {
@@ -22,6 +22,7 @@ export const more = css`
     -webkit-touch-callout: none;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    touch-action: manipulation;
 
     &::before,
     &::after {
@@ -73,13 +74,13 @@ export const more = css`
     }
   }
 
-  input:is([type='button'], [type='submit'], [type='reset']),
-  input[type='file']::file-selector-button,
+  input:is([type="button"], [type="submit"], [type="reset"]),
+  input[type="file"]::file-selector-button,
   button {
     color: initial;
   }
 
-  input[type='number'] {
+  input[type="number"] {
     &::-webkit-outer-spin-button,
     &::-webkit-inner-spin-button {
       margin: 0;
