@@ -1,5 +1,6 @@
 import { faPhone } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Fade } from "react-awesome-reveal";
 import { colors } from "../../styles/theme/colors";
 import { Contact } from "../Contact";
 import { Button, Title } from "../common";
@@ -17,9 +18,13 @@ export const Greeting = () => {
 
   return (
     <Styled.Container>
-      <Title subTitle="INVITATION" title="소중한 분들을 초대합니다" />
-      <Styled.Content>
-        {` 
+      <Fade direction="up" triggerOnce={true} fraction={0.01}>
+        <Title subTitle="INVITATION" title="소중한 분들을 초대합니다" />
+      </Fade>
+
+      <Fade direction="up" triggerOnce={true} fraction={0.01}>
+        <Styled.Content>
+          {` 
 새로이 시작하는 작은사랑이 
 보다 깊고 향 짙게 꽃피려 합니다
 
@@ -31,15 +36,20 @@ export const Greeting = () => {
 이룰 수 있도록 따뜻한 마음으로
 축복해주시면 감사하겠습니다
         `}
-      </Styled.Content>
+        </Styled.Content>
+      </Fade>
+
       <Styled.Line />
-      <Styled.Content margin>신부 정라희 &nbsp; | &nbsp; 신랑 최지현</Styled.Content>
-      <Button
-        text="연락하기"
-        size="medium"
-        icon={<FontAwesomeIcon icon={faPhone} color={colors.gray6} />}
-        onClick={clickModalOpenHandler}
-      />
+
+      <Fade direction="up" triggerOnce={true} fraction={0.01}>
+        <Styled.Content margin>신부 정라희 &nbsp; | &nbsp; 신랑 최지현</Styled.Content>
+        <Button
+          text="연락하기"
+          size="medium"
+          icon={<FontAwesomeIcon icon={faPhone} color={colors.gray6} />}
+          onClick={clickModalOpenHandler}
+        />
+      </Fade>
     </Styled.Container>
   );
 };

@@ -1,3 +1,4 @@
+import { Fade } from "react-awesome-reveal";
 import {
   Account,
   Comments,
@@ -7,20 +8,34 @@ import {
   Gallery,
   Greeting,
   Information,
-  Main,
-} from './components';
+  Main
+} from "./components";
 
 function App() {
   return (
     <>
       <Main />
-      <Greeting />
-      <EventDate />
-      <Directions />
-      <Information />
-      <Account />
-      <Gallery />
-      <Comments />
+      <Fade direction="up" triggerOnce={true} fraction={0.01}>
+        <Greeting />
+      </Fade>
+      <Fade direction="up" triggerOnce={true} fraction={0.01}>
+        <EventDate />
+      </Fade>
+      <Fade direction="up" triggerOnce={true} fraction={0.01}>
+        <Directions />
+      </Fade>
+      <Fade direction="up" triggerOnce={true} fraction={0.01}>
+        <Information />
+      </Fade>
+      <Fade direction="up" triggerOnce={true} fraction={0.01}>
+        <Account />
+      </Fade>
+      <Fade direction="up" triggerOnce={true} fraction={0.01}>
+        <Gallery />
+      </Fade>
+      <Fade direction="up" triggerOnce={true} fraction={0.01}>
+        <Comments />
+      </Fade>
       <Footer />
     </>
   );
