@@ -1,5 +1,7 @@
 import { useEffect } from "react";
-import thumbnail from "../../assets/thumbnail.png";
+import kakaoShareImage from "../../assets/kakaoShare.png";
+import { FlexCenter } from "../../styles/mixins";
+import * as Styled from "./KakaoShareButton.styles";
 
 export const KakaoShareButton = () => {
   useEffect(() => {
@@ -17,8 +19,9 @@ export const KakaoShareButton = () => {
       objectType: "feed",
       content: {
         title: "라희♡지현의 결혼식에 초대합니다",
-        description: "헤리움 웨딩홀, 2024년 5월 25일 오전 11시",
-        imageUrl: thumbnail,
+        description: "헤리움 웨딩홀, 2024년 5월 25일 11시",
+        imageUrl:
+          "https://github.com/HyunseoY/mobile-wedding-invitation/blob/main/src/assets/thumbnail.png?raw=true",
         link: {
           mobileWebUrl: "https://lahee-wedding-invitation.vercel.app/",
           webUrl: "https://lahee-wedding-invitation.vercel.app/"
@@ -40,10 +43,9 @@ export const KakaoShareButton = () => {
 
   return (
     <button onClick={kakaoShare}>
-      <img
-        src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
-        alt="share-btn"
-      />
+      <FlexCenter>
+        <Styled.ButtonImg src={kakaoShareImage} alt="share-btn" />
+      </FlexCenter>
     </button>
   );
 };
