@@ -2,7 +2,7 @@ export const colors = {
   white: "#FFFFFF",
   black: "#585858",
   realBlack: "#000000",
-  pink: "#819FC4",
+  pink: "#92B8E2",
   pink2: "#4B81C4",
   blue: "#223F69",
   red: "#F76767",
