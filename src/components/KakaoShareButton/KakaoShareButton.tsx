@@ -1,4 +1,7 @@
 import { useEffect } from "react";
+import kakaoShareImage from "../../assets/kakaoShare.png";
+import { FlexCenter } from "../../styles/mixins";
+import * as Styled from "./KakaoShareButton.styles";
 
 export const KakaoShareButton = () => {
   useEffect(() => {
@@ -40,10 +43,9 @@ export const KakaoShareButton = () => {
 
   return (
     <button onClick={kakaoShare}>
-      <img
-        src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
-        alt="share-btn"
-      />
+      <FlexCenter>
+        <Styled.ButtonImg src={kakaoShareImage} alt="share-btn" />
+      </FlexCenter>
     </button>
   );
 };
