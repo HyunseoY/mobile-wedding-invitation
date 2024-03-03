@@ -20,13 +20,13 @@ export const Gallery = () => {
     shoot2,
     shoot3,
     shoot4,
-    shoot5,
     shoot6,
     shoot7,
     shoot8,
     shoot9,
     shoot10,
-    shoot11
+    shoot11,
+    shoot5
   ];
 
   const [loaded, setLoaded] = useState(false);
