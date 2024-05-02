@@ -29,10 +29,10 @@ export const Contact = () => {
             </Styled.NameBox>
 
             <Styled.LinkBox>
-              <a href="tel:01024285533">
+              <a href="tel:01075248355">
                 {<FontAwesomeIcon icon={faPhone} color={colors.gray3} />}
               </a>
-              <a href="sms:01024285533">
+              <a href="sms:01075248355">
                 {<FontAwesomeIcon icon={faEnvelope} color={colors.gray3} />}
               </a>
             </Styled.LinkBox>
